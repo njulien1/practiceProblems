@@ -1,0 +1,112 @@
+#problem1
+#print sums that aren't divisible by 6
+for i in range(101):
+	if i%6 != 0:
+		print(i)
+
+#problem2
+#fizzBuzz
+for num in range(1, 101):
+	if num%15 == 0:
+		print("FizzBuzz")
+	elif num%5 == 0:
+		print("Buzz")
+	elif num%3 == 0:
+		print("Fizz")
+	else:
+		print(num)
+
+#problem3
+#calculate pay and include overtime pay if hours > 40
+h=int(input("how many hours did you work: "))
+if h<=40:
+	print(h*15)
+elif h>40:
+	print((40*15)+(h-40)*(1.5*15))
+
+
+#problem4
+#type done, don't crash if it's not done
+answer= input("type done: ")
+while answer != "done":
+	answer= input("type done: ")
+
+#problem5
+#print sum of all numbers entered once the user types done
+number = input("enter a number ")
+sum = 0
+while number != "done":
+	sum += int(number)
+	number = input("enter a number ")
+print("the sum is", sum)
+
+#problem6
+
+result = 1
+y = int(input("pick a number: "))
+while y != 1:
+	result = result * y
+	y = y - 1
+print(result)
+
+#problem7
+for x in range(100, 151):
+	if x%2 == 1:
+		print(x)
+#problem8
+for row in range(5):
+	for i in range(5):
+		if i == row:
+			continue
+		print(i, end="")
+	print()
+
+#problem 9
+for row in range(6):
+	for i in range(row+1):
+		print(i,end="")
+	print()
+
+
+#problem 10
+for a in range(1,6,1):
+	print(a, end="")
+	if a == 5:
+		for b in range(4,0,-1):
+			print(b, end="")
+print()
+
+#problem11
+for row in range(5):
+	for i in range(row+1):
+		print(i+1, end="")
+	for a in range(i,0,-1):
+		print(a, end="")
+	print()
+	
+#problem12 
+for row in range(5):
+	print(" "*row,end="")
+	for i in range(9-row*2):
+		print("*",end="")
+	print(" "*row,end="")
+	print()
+		
+#problem13
+for i in range(1,6):
+	for j in range(1,10):
+		if i==5 or i+j==6 or j-i==4:
+			print("*", end=" ")
+		else:
+			print(end="  ")
+	print()
+
+#problem14
+for row in range(1,21):
+	for i in range(1,40):
+		if row == 1 or row == 20 or i == 1 or i == 39:
+			print("*",end="")
+		else:
+			print(" ",end="")
+
+	print()
